@@ -1,3 +1,4 @@
+import "../../assets/styles/home.css"
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../components/Button';
@@ -6,9 +7,9 @@ import photoBox from '../../components/PhotoBox/photoBox.json';
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="homeContent">
         {photoBox.map((item, index) => (
-            <PhotoBox 
+            <PhotoBox
             key={index}
             name={item.name}
             title={item.title}
@@ -18,8 +19,6 @@ const HomePage = () => {
         ))}
 
         <Link to="/inner"><Button text="Know more"/></Link>
-
-        
     </div>
   );
 }

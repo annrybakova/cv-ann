@@ -5,12 +5,12 @@ const Feedback = ({ data }) => {
     <div className="feedback-list">
       {data.map((item, index) => (
         <div key={index} className="feedback-item">
-          <p>{item.feedback}</p>
+          <p className="feedback-details">{item.feedback}</p>
           <div className="reporter">
             <img src={item.reporter.photoUrl} alt={item.reporter.name} />
-            <p>{item.reporter.name}</p>
-            <a href={item.reporter.citeUrl} target="_blank" rel="noopener noreferrer">
-              Source
+            <p>{item.reporter.name},</p>
+            <a className="feedback-site" href={item.reporter.citeUrl} target="_blank" rel="noopener noreferrer">
+              somesite.com
             </a>
           </div>
         </div>

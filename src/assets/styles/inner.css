@@ -1,0 +1,389 @@
+.inner{
+    display: flex;
+    background: white;
+    min-width: 650px;
+    height: 100vh;
+}
+
+.panel {
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+    background: #222935;
+    transition: width 0.5s;
+    width: 260px;
+    height: 100%;
+    text-align: center;
+    color: #667081;
+}
+
+.hide-btn{
+    flex: 0 0 auto;
+    width: 35px;
+    height: 35px;
+    left: 258px;
+    background-color: #222935;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar { width: 0;}
+
+.photo-box{
+    color: #FFFFFF;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.list, .list-svg{
+    display: flex;
+    font-family: FontAwesome;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    padding: 18px 20px 18px 20px;
+    gap: 30px;
+}
+
+.list li {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+li:hover {
+    color:aquamarine;
+    cursor: pointer;
+}
+li.active{
+    color: #26C17E;
+}
+
+li svg{
+    scale: 1.3;
+}
+
+.inner-btn{
+    margin-top: auto;
+    margin-right: 5px;
+}
+
+.content{
+    display: flex;
+    flex: 1 1;
+    overflow: auto;
+    flex-direction: column;
+    padding: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+    gap: 30px;
+    color: #26C17E;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+
+.timeline-event{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.event-date{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3%;
+    height: 100%;
+}
+
+.event-line{
+    display:flex;
+    align-items: center;
+    height: 100%;
+}
+
+.line{
+    border-left: 5px solid #26C17E;
+    height: 100%;
+}
+
+.event-details{
+    
+    background-color: #EEEEEE;
+    padding-left: 15px;
+    padding-right: 10px;
+    min-height: 157px;
+}
+
+.event-triangle { 
+    content: '';
+    border: 13px solid;
+    border-color: transparent #EEEEEE transparent transparent;
+    position: relative;
+}
+
+.expertise{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.experience{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.skill-graph{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill-level{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: #26C17E;
+}
+
+.skill-type{
+    padding-left: 15px;
+    color: #FFFFFF;
+}
+
+.scale {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    height: 10px;
+    margin-top: 10px;
+    border-bottom: groove;
+    border-left-style: groove;
+    border-right-style: groove 
+   
+}
+
+.scale div:nth-child(3){
+    border-right-style: groove;
+    height: 10px;
+}
+.scale div:nth-child(12){
+    border-left-style: groove;
+    height: 10px;
+}
+
+.scale-name{
+    display: grid;
+    justify-items: center;
+    overflow: hidden;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 1fr;
+}
+
+.scale-name div:first-child{
+    justify-self:start
+}
+.scale-name div:last-child{
+    justify-self:end
+}
+
+.place{
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    gap: 5px;
+}
+
+.company{
+    font-weight: bold;
+}
+
+.job{
+    font-weight: bold;
+}
+
+.portfolio-btn{
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    color: black;
+    padding: 0;
+}
+
+.grid{
+    display: flex;
+    justify-content: flex-start;
+    align-content: space-around;
+    flex-wrap: wrap
+}
+
+.grid-item h3{
+    margin: 0;
+}
+
+.grid-item{
+    position: relative;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    width: 310px;
+    height: 190px;
+}
+
+.img-content{
+    opacity:0;
+    position:absolute;
+    padding: 11px;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+.img-content a{
+    text-decoration: #26C17E underline;
+    color:#26C17E 
+}
+
+.portfolio-img{
+    width: 310px;
+    height: 190px;
+    animation: slidein 2s; 
+}
+
+.img-content:hover{
+    opacity: 0.8;
+    animation: pop 0.2s linear;
+    position: absolute; 
+}
+
+@keyframes pop {
+    from{
+        transform: translateY(10%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slidein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: opacity ease-in-out;
+    }
+}
+
+.filter-btn{
+    cursor: pointer;
+}
+
+.filter-btn:active{
+    color: #26C17E;
+}
+
+.contacts-links{
+    color: black;
+    font-weight: bold;
+}
+
+.contacts-links p:nth-child(1) a,
+.contacts-links p:nth-child(2) a{
+    color:black;
+    font-weight: bold;
+}
+
+.contacts-links svg{
+    color: #26C17E;
+    scale: 1.8;
+    margin-right: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #667081;
+    font-weight: 400;
+}
+
+.info-wrapper{
+    color: black;
+}
+
+.feedback-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feedback-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-details{
+    background-color: #EEEEEE;
+    padding: 20px;
+}
+
+.reporter{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.feedback-site{
+    color: #26C17E;
+}
+
+.scroll-btn{
+    position: fixed;
+    bottom: 0;
+    right: 40px;
+    width: 40px;
+    height: 35px;
+    background-color: #222935;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    ul.list, .photo-box h1{
+        display: none;
+        transition: display 0.5s;
+    }
+
+    .panel{
+        width: 80px;
+        transition: width 0.5s;
+    }
+
+    .avatar{
+        height: 63px;
+        width: 63px;
+        transition: width 0.5s, height 0.5s;
+        margin-top: 15px;
+    }
+
+    .list-svg{
+    flex: 1 1;
+    align-items: center;
+    }
+}
+

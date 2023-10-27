@@ -1,0 +1,18 @@
+[
+    {
+        "type": "HTML",
+        "level": "45"
+    },
+    {
+        "type": "JavaScript",
+        "level": "20"
+    },
+    {
+        "type": "CSS",
+        "level": "40"
+    },
+    {
+        "type": "React",
+        "level": "25"
+    }
+]

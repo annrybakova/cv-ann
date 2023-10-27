@@ -1,16 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import Isotope from 'isotope-layout';
-import portfolioData from './portfolioData.json'; // Assuming you've created the JSON file as described earlier
+import portfolioData from './portfolioData.json'; 
+import Info from '../../components/Info';
 
-const Portfolio = () => {
+const Portfolio = ({collapsed}) => {
   const [activeTab, setActiveTab] = useState('all');
+  const [activeItem, setActiveItem] = useState('all');
+
+  const handleItemClick = (item) => {
+    setActiveItem(item);
+    setActiveTab(item);
+  }
 
   useEffect(() => {
     const grid = document.querySelector('.grid');
     const iso = new Isotope(grid, {
       itemSelector: '.grid-item',
       masonry: {
-        columnWidth: 200
+        columnWidth: 180
       }
     });
 
@@ -22,16 +30,25 @@ const Portfolio = () => {
     : portfolioData.filter(item => item.category === activeTab);
 
   return (
-    <div>
+    <div className={`container ${collapsed ? 'collapsed' : null}`}>
       <h2>Portfolio</h2>
-      <div>
-        <button onClick={() => setActiveTab('all')}>All</button>
-        <button onClick={() => setActiveTab('code')}>Code</button>
-        <button onClick={() => setActiveTab('UI')}>UI</button>
-      </div>
+      <ul className="portfolio-btn">
+        <li className={activeItem === 'all' ? 'active' : 'filter-btn'} onClick={() => handleItemClick('all')}>All</li>/
+        <li className={activeItem === 'code' ? 'active' : 'filter-btn'} onClick={() => handleItemClick('code')}>Code</li>/
+        <li className={activeItem === 'UI' ? 'active' : 'filter-btn'} onClick={() => handleItemClick('UI')}>UI</li>
+      </ul>
       <div className="grid">
         {filteredItems.map((item, index) => (
-          <div className="grid-item" key={index}>{item.title}</div>
+          <article className="grid-item" key={index}>
+              <div className='img-content'>
+                <h3>{item.title}</h3>
+                <Info text={<p>{item.description}</p>}/>
+                <Link to={item.link}>
+                  View resourse
+                </Link>
+              </div>
+              <div className='portfolio-img' style={{backgroundImage: `url(${item.picture})`, backgroundRepeat: 'no-repeat'}}></div>
+          </article>
         ))}
       </div>
     </div>

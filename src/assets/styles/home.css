@@ -1,0 +1,40 @@
+:root{
+    display: block;
+    background: url(../images/bck-home.png) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.homeContent{
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.avatar{
+    height: 163px;
+    width: 163px;
+    transition: width 0.5s, height 0.5s;
+    border-radius: 50%;
+    border: 2px solid whitesmoke;
+    margin-top: 25px;
+}
+
+.custom-button{
+    background-color: #222935;
+    border-radius: 8px;
+    height: 40px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+button:hover, .scroll-btn:hover{
+    background-color: #26C17E;
+}
