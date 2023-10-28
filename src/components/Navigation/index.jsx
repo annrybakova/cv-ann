@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faGraduationCap, faPaperPlane, faBriefcase, faPen, faGem, faComment  } from '@fortawesome/free-solid-svg-icons'
 
@@ -13,6 +13,34 @@ const Navigation = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveItem(entry.target.id);
+        }
+      });
+    }, { threshold: 1 });
+  
+    const sectionIds = ['aboutMe', 'education', 'experience', 'skills', 'portfolio', 'contact', 'feedback'];
+    sectionIds.forEach(id => {
+      const section = document.getElementById(id);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+  
+    return () => {
+      sectionIds.forEach(id => {
+        const section = document.getElementById(id);
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
+    };
+  }, []);
+  
 
   return (
     <nav>
