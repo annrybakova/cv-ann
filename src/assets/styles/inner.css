@@ -1,12 +1,10 @@
 .inner{
     display: flex;
     background: white;
-    min-width: 650px;
     height: 100vh;
 }
 
 .panel {
-    /* position: fixed; */
     display: flex;
     flex-direction: column;
     background: #222935;
@@ -34,6 +32,22 @@
 
 .photo-box{
     color: #FFFFFF;
+}
+
+.inner .avatar{
+    height: 163px;
+    width: 163px;
+    transition: width 0.5s, height 0.5s;
+    border-radius: 50%;
+    border: 2px solid whitesmoke;
+    margin-top: 25px;
+}
+
+.inner h1{
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 19px;
+    letter-spacing: 1px;
 }
 
 nav{
@@ -93,11 +107,30 @@ li svg{
     gap: 2%;
 }
 
+.timeline .loading {
+    position: relative;
+    margin-top: 150px;
+    text-align: center;
+    overflow-y: auto;
+    color: #26C17E;
+    transform: scale(2);
+  }
+
 .timeline-event{
     display: flex;
     flex-direction: row;
     align-items: baseline;
+    animation: fadeIn 0.5s ease-in-out;
 }
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 .event-date{
     font-weight: bold;
@@ -374,7 +407,7 @@ a{
         transition: width 0.5s;
     }
 
-    .avatar{
+    .inner .avatar{
         height: 63px;
         width: 63px;
         transition: width 0.5s, height 0.5s;

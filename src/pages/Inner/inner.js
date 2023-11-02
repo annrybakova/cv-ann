@@ -11,7 +11,7 @@ import Panel from '../../components/Panel';
 import ScrollToTopBtn from '../../components/Button/btn-up';
 import '../../assets/styles/inner.css'
 
-import timelineData from '../../components/TimeLine/timelineData.json';
+// import timelineData from '../../components/TimeLine/timelineData.json';
 import expertise from '../../components/Expertise/expertise.json';
 import skillsList from '../../components/Expertise/skillList.json';
 import feedback from '../../components/Feedback/feedback.json';
@@ -42,7 +42,7 @@ function InnerPage() {
         <div id="education">
           <Box 
             title="Education" 
-            content={<Info text={<TimeLine data={timelineData} />}/>}
+            content={<Info text={<TimeLine />}/>}
           />
         </div>
         
