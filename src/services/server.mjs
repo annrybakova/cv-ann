@@ -1,5 +1,6 @@
 import { createServer, Model } from 'miragejs';
-import TimelineData from '../components/TimeLine/timelineData.json';
+import education from '../components/TimeLine/timelineData.json';
+import skillsList from '../components/Expertise/skillList.json';
 
 function makeServer({ environment = 'development' } = {}) {
   let server = createServer({
@@ -12,8 +13,15 @@ function makeServer({ environment = 'development' } = {}) {
     routes() {
       this.namespace = 'api';
 
-      this.get('/timelineData', () => {
-        return JSON.parse(JSON.stringify(TimelineData));
+      this.get('/education', () => {
+        return JSON.parse(JSON.stringify(education));
+      });
+      this.get('/skills', () => {
+        return JSON.parse(JSON.stringify(skillsList));
+      });
+      this.post('/skills', (schema, request) => {
+        let newSkill = JSON.parse(request.requestBody);
+        return schema.create('skill', newSkill);
       });
     },
   });

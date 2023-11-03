@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { setSkillsData } from '../../actions';
 
 const SkillBar = ({ type, level }) => {
   return (
@@ -15,19 +17,10 @@ const SkillBar = ({ type, level }) => {
 const Scale = () => {
     return (
       <div className="scale">
-        {/* <div></div>
-        <div className="scale-label"></div>
-        <div></div>
-        <div></div>
-        <div className="scale-label"></div>
-        <div></div> */}
         <div></div>
         <div></div>
         <div></div>
         <div></div>
-        {/* <div></div> */}
-        {/* <div></div> */}
-        {/* <div></div> */}
         <div></div>
         <div></div>
         <div></div>
@@ -54,7 +47,25 @@ const ScaleName = () => {
     );
 }
 
-const Skills = ({ skillsData }) => {
+const mapStateToProps = (state) => ({
+  skillsData: state.skillsData
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  setSkillsData: (data) => dispatch(setSkillsData(data))
+});
+
+const Skills = ({skillsData, setSkillsData}) => {
+
+  useEffect(() => {
+      fetch('/api/skills')
+        .then(response => response.json())
+        .then(data => {
+          setSkillsData(data);
+        })
+        .catch(error => console.error('Error:', error));
+  }, [setSkillsData]);
+
   return (
     <div className='skill-graph'>
       {skillsData.map((skill, index) => (
@@ -66,4 +77,4 @@ const Skills = ({ skillsData }) => {
   );
 }
 
-export default Skills;
+export default connect(mapStateToProps, mapDispatchToProps)(Skills);
