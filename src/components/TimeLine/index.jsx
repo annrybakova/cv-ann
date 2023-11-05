@@ -1,22 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { setEducationData } from '../../actions';
+import { setError, setIsLoading } from '../../actions';
+import { fetchEducationData } from '../../thunks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 const mapStateToProps = (state) => ({
-  educationData: state.educationData
+  educationData: state.educationData,
+  error: state.error,
+  isLoading: state.isLoading,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  setEducationData: (data) => dispatch(setEducationData(data))
+  setError: () => dispatch(setError()),
+  setIsLoading: () => dispatch(setIsLoading()),
+  fetchEducationData: () => dispatch(fetchEducationData())
 });
 
 
-const TimeLine = ({ educationData, setEducationData }) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
+const TimeLine = ({ educationData, isLoading, error, fetchEducationData }) => {
   const containerStyle = {
     maxHeight: '80vh',
     height: '30vh',
@@ -25,19 +27,9 @@ const TimeLine = ({ educationData, setEducationData }) => {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch('/api/education')
-        .then(response => response.json())
-        .then(data => {
-          setEducationData(data);
-          setIsLoading(false);
-        })
-        .catch(error => {
-          console.error('Error:', error);
-          setIsLoading(false);
-          setError(error)
-        });
+      fetchEducationData();
     }, 2000);
-  }, [setEducationData]);
+  }, [fetchEducationData]);
 
   if (error) {
     return <div className="timeline" style={{color: 'red'}}>Something went wrong: Please review your server connection <br /> Error: {error.message}</div>;
@@ -45,11 +37,14 @@ const TimeLine = ({ educationData, setEducationData }) => {
 
   return (
     <div className="timeline" style={containerStyle}>
-      {isLoading ? (
+      {isLoading || (!educationData) ? (
         <div className="loading"><FontAwesomeIcon icon={faSpinner} spinPulse /></div>
       ) : (
         <>
-          {educationData.map((event, index) => (
+          {educationData
+          .slice()
+          .sort((a, b) => new Date(a.date) - new Date(b.date))
+          .map((event, index) => (
             <div key={index} className="timeline-event">
               <div className="event-date">
                 <div className="date">
@@ -72,5 +67,4 @@ const TimeLine = ({ educationData, setEducationData }) => {
   );
 };
 
-// export default TimeLine;
 export default connect(mapStateToProps, mapDispatchToProps)(TimeLine);

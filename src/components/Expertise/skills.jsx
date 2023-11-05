@@ -1,6 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { setSkillsData } from '../../actions';
+import { fetchSkillsData } from '../../thunks'
+import Button from '../Button';
+import EditPanel from './skills-editor';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 
 const SkillBar = ({ type, level }) => {
   return (
@@ -52,28 +56,34 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  setSkillsData: (data) => dispatch(setSkillsData(data))
+  fetchSkillsData: () => dispatch(fetchSkillsData())
 });
 
-const Skills = ({skillsData, setSkillsData}) => {
+const Skills = ({skillsData, fetchSkillsData}) => {
+  const[editPanel, setEditPanel]=useState(false);
+
+  const toggleEditSkillsVisibility = () => {
+    setEditPanel(!editPanel);
+  }
 
   useEffect(() => {
-      fetch('/api/skills')
-        .then(response => response.json())
-        .then(data => {
-          setSkillsData(data);
-        })
-        .catch(error => console.error('Error:', error));
-  }, [setSkillsData]);
+    fetchSkillsData()
+  }, [fetchSkillsData]);
 
   return (
-    <div className='skill-graph'>
-      {skillsData.map((skill, index) => (
-        <SkillBar key={index} type={skill.type} level={skill.level} />
-      ))}
-      <Scale />
-      <ScaleName />
-    </div>
+    <>
+      <Button className='skills-btn' icon={<FontAwesomeIcon icon={faPenToSquare} />} text=" Edit skills" onClick={toggleEditSkillsVisibility}/>
+      {editPanel &&
+        <EditPanel/>
+      }
+      <div className='skill-graph'>
+        {skillsData.map((skill, index) => (
+          <SkillBar key={index} type={skill.type} level={skill.level} />
+        ))}
+        <Scale />
+        <ScaleName />
+      </div>
+    </>
   );
 }
 

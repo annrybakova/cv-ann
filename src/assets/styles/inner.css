@@ -15,17 +15,20 @@
     color: #667081;
 }
 
-.hide-btn{
-    flex: 0 0 auto;
-    width: 35px;
-    height: 35px;
-    left: 258px;
+Button {
     background-color: #222935;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
     color: white;
     border: none;
     cursor: pointer;
+}
+
+.hide-btn {
+    width: 35px;
+    height: 35px;
+    left: 258px;
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 ::-webkit-scrollbar { width: 0;}
@@ -85,6 +88,18 @@ li svg{
 }
 
 .inner-btn{
+    background-color: #222935;
+    border-radius: 8px;
+    height: 40px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 1px;
     margin-top: auto;
     margin-right: 5px;
 }
@@ -197,6 +212,23 @@ li svg{
 .skill-type{
     padding-left: 15px;
     color: #FFFFFF;
+}
+
+.skills-btn{
+    background-color: #222935;
+    border-radius: 8px;
+    height: 35px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    left: 100%;
+    position: sticky;
 }
 
 .scale {
@@ -420,3 +452,44 @@ a{
     }
 }
 
+.skills-form {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #26C17E;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.block, .error {
+    display: inline-grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: baseline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid black
+}
+.form-button {
+    height: 25px;
+    width: 65px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px gray;
+    cursor: pointer; 
+}
+.form-button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.error {
+    border: 2px solid red;
+} 
+.error-message {
+    color: red;
+}

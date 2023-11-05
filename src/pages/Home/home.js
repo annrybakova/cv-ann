@@ -20,7 +20,7 @@ const HomePage = () => {
               />
           ))}
 
-          <Link to="/inner"><Button text="Know more"/></Link>
+          <Link to="/inner"><Button className='knowMore-btn' text="Know more"/></Link>
       </div>
     </>
   );

@@ -30,12 +30,13 @@ const Panel = () => {
 
             <Navigation />
             <div className="inner-btn"> 
-              <Link to="/"><Button icon={<FontAwesomeIcon icon={faChevronLeft} />} text=" Go back" /></Link>
+              <Link to="/"><Button className="inner-btn" icon={<FontAwesomeIcon icon={faChevronLeft} />} text=" Go back" /></Link>
             </div>
           </div>
           </>
         )}
-        <button className='hide-btn'  onClick={togglePanelVisibility}>{<FontAwesomeIcon icon={faBurger}/>}</button>
+        <Button className='hide-btn' icon={<FontAwesomeIcon icon={faBurger} />} onClick={togglePanelVisibility}/>
+        {/* <button className='hide-btn'  onClick={togglePanelVisibility}>{<FontAwesomeIcon icon={faBurger}/>}</button> */}
     </>
   );
 }
