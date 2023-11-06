@@ -1,4 +1,3 @@
-import { createSlice } from '@reduxjs/toolkit';
 export const SET_EDUCATION_DATA = 'api/education/fulfilled';
 export const SET_SKILLS_DATA = 'api/skills/fulfilled';
 export const SET_ERROR = 'api/education/error';
@@ -31,16 +30,3 @@ export const addSkill = (type, level) => ({
       level
     }
   });
-
-//   const skillsSlice = createSlice({
-//     name: 'skills',
-//     initialState: [],
-//     reducers: {
-//       addSkill(state, action) {
-//         state.push(action.payload);
-//       },
-//     },
-//   });
-  
-//   export const { addSkill } = skillsSlice.actions;
-//   export default skillsSlice.reducer;

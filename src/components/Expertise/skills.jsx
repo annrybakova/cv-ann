@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { connect } from 'react-redux';
+import { connect,  useDispatch } from 'react-redux';
 import { fetchSkillsData } from '../../thunks'
+import { setSkillsData } from '../../actions'
 import Button from '../Button';
-// import { ConnectedEditPanel1, ConnectedEditPanel2 } from './skills-editor';
 import EditPanel from './skills-editor';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
@@ -60,7 +60,8 @@ const mapDispatchToProps = (dispatch) => ({
   fetchSkillsData: () => dispatch(fetchSkillsData())
 });
 
-const Skills = ({skillsData, fetchSkillsData}) => {
+const Skills = ({skillsData}) => {
+  const dispatch = useDispatch();
   const[editPanel, setEditPanel]=useState(false);
 
   const toggleEditSkillsVisibility = () => {
@@ -68,8 +69,13 @@ const Skills = ({skillsData, fetchSkillsData}) => {
   }
 
   useEffect(() => {
+    const localSkillsData = localStorage.getItem('skillsData');
+    if (localSkillsData) {
+      dispatch(setSkillsData(JSON.parse(localSkillsData)));
+    } else {
     fetchSkillsData()
-  }, [fetchSkillsData]);
+    }
+  }, [dispatch]);
 
   return (
     <>

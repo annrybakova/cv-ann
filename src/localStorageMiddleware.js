@@ -1,12 +1,15 @@
-export const localStorageMiddleware = (store) => (next) => (action) => {
-    const result = next(action);
-  
-    if (action.type === 'ADD_SKILL') {
-      const skillsData = store.getState().skillsData;
-    //   skillsData.push(action.payload);
-      localStorage.setItem('skillsData', JSON.stringify(skillsData));
-    }
-  
-    return result;
-  };
+import { SET_SKILLS_DATA, ADD_SKILL } from './actions';
+
+
+const saveSkillsDataToLocalStorage = (store) => (next) => (action) => {
+
+  next(action);
+
+  if (action.type === SET_SKILLS_DATA || action.type === ADD_SKILL) {
+    localStorage.setItem('skillsData', JSON.stringify(store.getState().skillsData));
+  }
+};
+
+export default saveSkillsDataToLocalStorage;
+
   
