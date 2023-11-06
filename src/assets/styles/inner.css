@@ -481,12 +481,16 @@ a{
     margin: 10px;
     border-radius: 5px;
     border: 2px gray;
-    cursor: pointer; 
+    /* cursor: pointer;  */
 }
 .form-button.disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
+/* .form-button.enabled {
+    background-color: blue;
+    cursor: pointer;
+  } */
 .error {
     border: 2px solid red;
 } 

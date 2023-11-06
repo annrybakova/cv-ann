@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { fetchSkillsData } from '../../thunks'
 import Button from '../Button';
+// import { ConnectedEditPanel1, ConnectedEditPanel2 } from './skills-editor';
 import EditPanel from './skills-editor';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
