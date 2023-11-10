@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import contactData from './contactData.json';
-import { setContactData} from '../../actions';
-import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
@@ -21,4 +19,3 @@ const Address = () => {
 }
 
 export default Address;
-// export default connect(mapStateToProps, mapDispatchToProps)(Address);

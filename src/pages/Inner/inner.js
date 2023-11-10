@@ -72,7 +72,9 @@ function InnerPage() {
           />
         </div>
 
-        <ScrollToTopBtn />
+        <div>
+          <ScrollToTopBtn />
+        </div>
       </div>
     </div>
   );

@@ -36,7 +36,6 @@ const Panel = () => {
           </>
         )}
         <Button className='hide-btn' icon={<FontAwesomeIcon icon={faBurger} />} onClick={togglePanelVisibility}/>
-        {/* <button className='hide-btn'  onClick={togglePanelVisibility}>{<FontAwesomeIcon icon={faBurger}/>}</button> */}
     </>
   );
 }

@@ -60,7 +60,7 @@ const mapDispatchToProps = (dispatch) => ({
   fetchSkillsData: () => dispatch(fetchSkillsData())
 });
 
-const Skills = ({skillsData}) => {
+const Skills = ({skillsData, fetchSkillsData}) => {
   const dispatch = useDispatch();
   const[editPanel, setEditPanel]=useState(false);
 

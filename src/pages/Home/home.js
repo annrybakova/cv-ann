@@ -1,4 +1,4 @@
-import "../../assets/styles/home.css"
+import styles from "../../assets/styles/home.css";
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../components/Button';

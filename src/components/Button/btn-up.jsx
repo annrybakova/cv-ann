@@ -19,9 +19,6 @@ const ScrollToTopBtn = () => {
         onClick={scrollToTop} 
         icon={<FontAwesomeIcon icon={faChevronUp}/>}
       />
-      // <button className="scroll-btn" onClick={scrollToTop}>
-      //   {<FontAwesomeIcon icon={faChevronUp}/>}
-      // </button>
   );
 };
 
