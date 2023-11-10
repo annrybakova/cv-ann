@@ -26,9 +26,10 @@ const TimeLine = ({ educationData, isLoading, error, fetchEducationData }) => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      fetchEducationData();
-    }, 2000);
+    fetchEducationData();
+    // setTimeout(() => {
+    //   fetchEducationData();
+    // }, 2000);
   }, [fetchEducationData]);
 
   if (error) {
