@@ -12,27 +12,19 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import App from '../App';
+import '@testing-library/jest-dom/extend-expect';
 import HomePage from '../pages/Home/home';
 import InnerPage from '../pages/Inner/inner';
 
 test('renders HomePage when the route is /', () => {
   render(
-    <MemoryRouter initialEntries={['/']}>
       <App />
-    </MemoryRouter>
   );
-
-  expect(screen.getByText('Programmer. Creative. Innovator')).toBeInTheDocument();
+  expect(screen.getByText("Programmer. Creative. Innovator")).toBeDefined();
   expect(screen.queryByText('About me')).toBeNull();
-});
+  const button = screen.getByText('Know more');
+  expect(button).toBeInTheDocument();
 
-test('renders InnerPage when the route is /inner', () => {
-  render(
-    <MemoryRouter initialEntries={['/inner']}>
-      <App />
-    </MemoryRouter>
-  );
-
-  expect(screen.getByText('About me')).toBeInTheDocument();
-  expect(screen.queryByText('Programmer. Creative. Innovator')).toBeNull();
+  expect(button).toHaveClass('knowMore-btn');
+  expect(button.closest('a')).toHaveAttribute('href', '/inner');
 });

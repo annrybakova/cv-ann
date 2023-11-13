@@ -1,18 +1,58 @@
 [
     {
         "type": "HTML",
-        "level": "45"
+        "level": "70"
     },
     {
         "type": "JavaScript",
-        "level": "20"
+        "level": "60"
     },
     {
         "type": "CSS",
-        "level": "40"
+        "level": "70"
     },
     {
         "type": "React",
-        "level": "25"
+        "level": "60"
+    },
+    {
+        "type": "Redux",
+        "level": "60"
+    },
+    {
+        "type": "LateX",
+        "level": "100"
+    },
+    {
+        "type": "MatLab",
+        "level": "80"
+    },
+    {
+        "type": "STATA",
+        "level": "80"
+    },
+    {
+        "type": "R - studio",
+        "level": "80"
+    },
+    {
+        "type": "SQL",
+        "level": "70"
+    },
+    {
+        "type": "PowerBI",
+        "level": "70"
+    },
+    {
+        "type": "Python (NumPy, Pandas)",
+        "level": "40"
+    },
+    {
+        "type": "C++",
+        "level": "50"
+    },
+    {
+        "type": "Sparql",
+        "level": "60"
     }
 ]

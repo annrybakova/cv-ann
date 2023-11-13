@@ -1,15 +1,9 @@
 import '@testing-library/jest-dom';
 import React from 'react';
 import { render } from '@testing-library/react';
-import {describe, expect, test} from '@jest/globals';
-import {Address} from '../components/Address';
-
-const contactData = {
-    phone: '123-456-7890',
-    email: 'test@example.com',
-    linkedin: 'https://www.linkedin.com/in/testuser',
-    facebook: 'https://www.facebook.com/testuser',
-  };
+import {describe, expect} from '@jest/globals';
+import Address from '../components/Address';
+import contactData from '../components/Address/contactData.json'
   
   describe('Address Component', () => {
     it('should render contact information', () => {
@@ -18,13 +12,13 @@ const contactData = {
       expect(getByText('Contacts')).toBeInTheDocument();
       expect(getByText(contactData.phone)).toBeInTheDocument();
       expect(getByText(contactData.email)).toBeInTheDocument();
-      expect(getByText(contactData.linkedin)).toBeInTheDocument();
-      expect(getByText(contactData.facebook)).toBeInTheDocument();
+      expect(getByText(contactData.shortLinkedin)).toBeInTheDocument();
+      expect(getByText(contactData.shortFacebook)).toBeInTheDocument();
   
       const phoneLink = getByRole('link', { name: contactData.phone });
       const emailLink = getByRole('link', { name: contactData.email });
-      const linkedinLink = getByRole('link', { name: contactData.linkedin });
-      const facebookLink = getByRole('link', { name: contactData.facebook });
+      const linkedinLink = getByRole('link', { name: contactData.shortLinkedin });
+      const facebookLink = getByRole('link', { name: contactData.shortFacebook });
   
       expect(phoneLink).toHaveAttribute('href', `tel:${contactData.phone}`);
       expect(emailLink).toHaveAttribute('href', `mailto:${contactData.email}`);

@@ -12,8 +12,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  setError: () => dispatch(setError()),
-  setIsLoading: () => dispatch(setIsLoading()),
+  setError: (error) => dispatch(setError(error)),
+  setIsLoading: (isLoading) => dispatch(setIsLoading(isLoading)),
   fetchEducationData: () => dispatch(fetchEducationData())
 });
 
@@ -22,50 +22,58 @@ const TimeLine = ({ educationData, isLoading, error, fetchEducationData }) => {
   const containerStyle = {
     maxHeight: '80vh',
     height: '30vh',
-    overflowY: 'auto'
+    overflowY: 'auto',
+    whiteSpace: 'pre-wrap'
   };
 
   useEffect(() => {
     fetchEducationData();
-    // setTimeout(() => {
-    //   fetchEducationData();
-    // }, 2000);
   }, [fetchEducationData]);
 
-  if (error) {
-    return <div className="timeline" style={{color: 'red'}}>Something went wrong: Please review your server connection <br /> Error: {error.message}</div>;
-  }
+  if (error.length > 0) {
+    console.log(error);
+    return (
+    <div className="timeline" style={{color: 'red'}}>
+      Something went wrong: Please review your server connection<br />
+      Error: {error} 
+    </div>
+    );
+  } 
 
   return (
     <div className="timeline" style={containerStyle}>
-      {isLoading || (!educationData) ? (
-        <div className="loading"><FontAwesomeIcon icon={faSpinner} spinPulse /></div>
-      ) : (
-        <>
-          {educationData
-          .slice()
-          .sort((a, b) => new Date(a.date) - new Date(b.date))
-          .map((event, index) => (
-            <div key={index} className="timeline-event">
-              <div className="event-date">
-                <div className="date">
-                  {event.date}
-                </div>
-                <div className='event-line'>
-                  <div className='line'></div>
-                </div>
-              </div>
-              <div className="event-triangle"></div>
-              <div className="event-details">
-                <h3>{event.title}</h3>
-                <p>{event.text}</p>
-              </div>
-            </div>
-          ))}
-       </>
-      )}
-    </div>
+            {(isLoading || (!educationData)) ? (
+              <div className="loading"><FontAwesomeIcon icon={faSpinner} spinPulse /></div>
+            ) : (
+              <>
+                {educationData
+                .slice()
+                .sort((a, b) => new Date(a.date) - new Date(b.date))
+                .map((event, index) => (
+                  <div key={index} className="timeline-event">
+                    <div className="event-date">
+                      <div className="date">
+                        {event.date}
+                      </div>
+                      <div className='event-line'>
+                        <div className='line'></div>
+                      </div>
+                    </div>
+                    <div className="event-triangle"></div>
+                    <div className="event-details">
+                      <h3>{event.title}</h3>
+                      <p>{event.text}</p>
+                    </div>
+                  </div>
+                ))
+               }
+              </>
+              )
+            }
+          {/* ) */}
+      {/* } */}
+  </div>
   );
-};
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(TimeLine);

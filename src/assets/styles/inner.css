@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: column;
     background: #222935;
-    transition: width 0.5s;
     width: 260px;
     height: 100%;
     text-align: center;
@@ -25,7 +24,6 @@ Button {
 .hide-btn {
     width: 35px;
     height: 35px;
-    left: 258px;
     border: none;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -79,15 +77,15 @@ li:hover {
     color:aquamarine;
     cursor: pointer;
 }
-li.active{
+li.active {
     color: #26C17E;
 }
 
-li svg{
+li svg {
     scale: 1.3;
 }
 
-.inner-btn{
+.inner-btn {
     background-color: #222935;
     border-radius: 8px;
     height: 40px;
@@ -129,7 +127,11 @@ li svg{
     overflow-y: auto;
     color: #26C17E;
     transform: scale(2);
-  }
+}
+
+.description {
+    white-space: pre-wrap;
+}
 
 .timeline-event{
     display: flex;
@@ -172,7 +174,7 @@ li svg{
     
     background-color: #EEEEEE;
     padding-left: 15px;
-    padding-right: 10px;
+    width: 100vh;
     min-height: 157px;
 }
 
@@ -232,45 +234,60 @@ li svg{
 }
 
 .scale {
-    display: grid;
-    grid-template-columns: repeat(14, 1fr);
+    display: flex;
     height: 10px;
     margin-top: 10px;
     border-bottom: groove;
     border-left-style: groove;
     border-right-style: groove 
-   
 }
 
-.scale div:nth-child(3){
-    border-right-style: groove;
-    height: 10px;
+.scale :first-child,
+.scale :last-child
+ {
+  flex: 0 0 22.5%;
 }
-.scale div:nth-child(12){
+.scale :nth-child(2){
     border-left-style: groove;
-    height: 10px;
+    border-right-style: groove;
+    flex: 0 0 55%;
 }
 
 .scale-name{
-    display: grid;
+    display: flex;
     justify-items: center;
     overflow: hidden;
-    grid-template-columns: repeat(7, 1fr);
-    grid-auto-rows: 1fr;
 }
 
-.scale-name div:first-child{
-    justify-self:start
+.scale-name :nth-child(2)
+{
+    left: -29px;
+    position: relative;
+    flex: 0 0 27.5%;
 }
-.scale-name div:last-child{
-    justify-self:end
+.scale-name :nth-child(3)
+{
+    left: 25px;
+    position: relative;
+    flex: 0 0 27.5%;
+    text-align: end;
+}
+.scale-name :first-child{
+    justify-self:start;
+    flex: 0 0 22.5%;
+}
+.scale-name :last-child{
+    justify-self:end;
+    text-align: end;
+    flex: 0 0 22.5%;
 }
 
 .place{
     display: flex;
     flex-direction: column;
-    width: 170px;
+    min-width: 150px;
     gap: 5px;
+    flex: 0 0 18%;
 }
 
 .company{
@@ -409,6 +426,12 @@ a{
     gap: 10px
 }
 
+.reporter img{
+    width: 60px;
+    height: 60px;
+    border-radius: 45px;
+}
+
 .feedback-site{
     color: #26C17E;
 }
@@ -450,6 +473,11 @@ a{
     flex: 1 1;
     align-items: center;
     }
+
+    .inner-btn{
+        margin-right: 0;
+        padding: 0;
+    }
 }
 
 .skills-form {
@@ -481,16 +509,11 @@ a{
     margin: 10px;
     border-radius: 5px;
     border: 2px gray;
-    /* cursor: pointer;  */
 }
 .form-button.disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
-/* .form-button.enabled {
-    background-color: blue;
-    cursor: pointer;
-  } */
 .error {
     border: 2px solid red;
 } 

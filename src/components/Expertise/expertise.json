@@ -1,17 +1,48 @@
-[
-  {
-    "date": "2013-2014",
-    "info": {
-      "company": "Google",
-      "job": "Front-end developer / php programmer",
-      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringil"
+[ {
+  "date": "2022-2023",
+  "info": {
+    "company": "Haemonetics",
+    "job": "QA Engineer",
+    "description": "- Collaborated with cross-functional teams in the development and rigorous testing of innovative features for the blood transfusion tracking interhospital system.\n- Ensured the high quality, performance, and reliability of the system through comprehensive testing and proactive bug resolution."
     }
   },
   {
-    "date": "2012",
+  "date": "2021-2022",
+  "info": {
+    "company": "KiberOne Israel",
+    "job": "General Product Manager",
+    "description": "- Orchestrated the successful launch of a private school for children, leading a team of educators.\n- Strategically assigned classes and extracurricular activities while closely monitoring and reporting on progress."
+    }
+  },
+  {
+  "date": "2016-2019",
+  "info": {
+    "company": "Urban Science",
+    "job": "Middle Data Analyst",
+    "description": "- Leveraged My-SQL expertise to develop, optimize, and implement functions, stored processes, and scripts, contributing to the creation of internal systems and regular updates.\n- Spearheaded data warehousing efforts, designing and maintaining databases for prominent European clients including Nissan, Opel, Skoda, Audi, and Volkswagen.\n- Generated comprehensive CSV and Excel reports by executing database queries, providing vital insights to support informed decision-making.\n- Championed process automation initiatives, utilizing PowerShell and Batch scripting to streamline monthly updates of internal systems."
+    }
+  },
+  {
+    "date": "2014-2017",
     "info": {
-      "company": "Twitter",
-      "job": "Web developer",
+      "company": "National Research University — Higher School of Economics",
+      "job": "Educational Assistant",
+      "description": "Facilitated the learning process by creating tailored homework assignments and conducting consultations for students in ‘Mathematical Analysis’ and ‘Introduction to Computer Science’."
+    }
+  },
+  {
+    "date": "2016",
+    "info": {
+      "company": "I-Teco",
+      "job": "ATM Tester",
+      "description": "Crafted robust test algorithms for ATM and POS-terminals, ensuring the integration of new features into credit card payment systems\nConducted rigorous testing to guarantee the stability and functionality of payment systems."
+    }
+  },
+  {
+    "date": "2015",
+    "info": {
+      "company": "Ministry of Digital Development, Communications and Mass Media",
+      "job": "Intern",
       "description": "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim"
     }
   }

@@ -10,7 +10,7 @@ const Feedback = ({ data }) => {
             <img src={item.reporter.photoUrl} alt={item.reporter.name} />
             <p>{item.reporter.name},</p>
             <a className="feedback-site" href={item.reporter.citeUrl} target="_blank" rel="noopener noreferrer">
-              somesite.com
+              linkedin account
             </a>
           </div>
         </div>

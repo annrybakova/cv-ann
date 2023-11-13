@@ -6,11 +6,14 @@ import Button from './';
 
 const ScrollToTopBtn = () => {
   const scrollToTop = () => {
-    console.log('Clicked!');
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    const element = document.getElementsByClassName("content")[0];
+
+    if (element) {
+      element.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (

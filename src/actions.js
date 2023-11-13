@@ -10,8 +10,9 @@ export const setEducationData = (data) => ({
     payload: data
 });
 
-export const setError = () => ({
-    type: SET_ERROR
+export const setError = (data) => ({
+    type: SET_ERROR,
+    payload: data
 });
 
 export const setIsLoading = () => ({

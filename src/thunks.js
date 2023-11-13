@@ -1,21 +1,6 @@
 import { setEducationData, setIsLoading, setError, setSkillsData } from './actions';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-// export const fetchEducationData = () => async (dispatch) => {
-//     try {   
-//         dispatch(setIsLoading(false));
-//         fetch('/api/education')
-//             .then(response => response.json()),{ timing: 4000 }
-//             .then(data => {
-//                 dispatch(setEducationData(data));  
-//             }) 
-//     } catch (error) {
-//         console.error('Error:', error);
-//         dispatch(setError());
-//     }
-// };
-
-
 export const fetchEducationData = () => async (dispatch) => {
     try {   
         setTimeout(async () => {
@@ -27,12 +12,14 @@ export const fetchEducationData = () => async (dispatch) => {
                 dispatch(setIsLoading(false));
             } catch (error) {
                 console.error('Error:', error);
-                dispatch(setError());
+                dispatch(setIsLoading(false));
+                dispatch(setError(error.description));
             }
         }, 2000);
     } catch (error) {
         console.error('Error:', error);
-        dispatch(setError());
+        dispatch(setIsLoading(false));
+        dispatch(setError(error.description));
     }
 };
 

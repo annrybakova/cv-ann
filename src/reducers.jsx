@@ -3,7 +3,7 @@ import { SET_EDUCATION_DATA, SET_SKILLS_DATA, SET_ERROR, SET_ISLOADING, ADD_SKIL
 const initialState = {
     educationData: [],
     skillsData: [],
-    error: false,
+    error: [],
     isLoading: true,
   };
  
@@ -17,7 +17,7 @@ const rootReducer = (state = initialState, action) => {
         case SET_ERROR:
             return {
                 ...state,
-                error: !state.error
+                error: action.payload
             };
         case SET_ISLOADING:
             return {

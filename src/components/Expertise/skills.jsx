@@ -25,15 +25,6 @@ const Scale = () => {
         <div></div>
         <div></div>
         <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
       </div>
     );
 }
@@ -43,9 +34,6 @@ const ScaleName = () => {
       <div className="scale-name">
         <div>Beginner</div>
         <div>Proficient</div>
-        <div></div>
-        <div></div>
-        <div></div>
         <div>Expert</div>
         <div>Master</div>
       </div>

@@ -17,15 +17,3 @@ root.render(
       </React.StrictMode>
   </Provider>
 );
-
-
-// root.render(
-//   <React.StrictMode>
-//     <Provider store={store}>
-//         <App />
-//     </Provider>
-//   </React.StrictMode>
-// );
-
-
-// reportWebVitals();
