@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.89925486.css",
+    "main.js": "/static/js/main.94bd78f2.js",
+    "static/media/bck-home.png": "/static/media/bck-home.d498ec78b0ac23c6c3bc.png",
+    "index.html": "/index.html",
+    "main.89925486.css.map": "/static/css/main.89925486.css.map",
+    "main.94bd78f2.js.map": "/static/js/main.94bd78f2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89925486.css",
+    "static/js/main.94bd78f2.js"
+  ]
+}
