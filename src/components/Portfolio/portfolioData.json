@@ -1,35 +1,52 @@
 [
     { 
-        "title": "Project 1",
-        "category": "code",
-        "picture": "/images/portfolio_card_1.png",
-        "description": "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis",
-        "link": "https://ru.wikipedia.org/"
+        "title": "BSc Extended Abstarct",
+        "category": "science",
+        "picture": "/images/portfolio_card_hse.png",
+        "description": "Analysis and visualization of genetic information in diagnostics\nBachelor's Thesis in the field of study: Bioinformatics",
+        "link": "https://docs.google.com/document/d/1ulb41y2kD_6ZGBa3Uejg4rBtHRrl4fDy/edit?usp=sharing&ouid=101565569049160067609&rtpof=true&sd=true"
     },
     { 
-        "title": "Project 2",
-        "category": "UI",
-        "picture": "/images/portfolio_card_2.png",
-        "description": "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis",
-        "link": "https://ru.wikipedia.org/"
-    
-    
+        "title": "MSc Extended Abstarct",
+        "category": "science",
+        "picture": "/images/portfolio_card_hse.png",
+        "description": "Simulation systems to analyze customer behavior based on online store data\nMaster's Thesis in the field of study:\nMathematical methods in economics",
+        "link": "https://docs.google.com/document/d/1rUpF3G-0-1hfTOHBEllDqA9ztLkSjhgx/edit?usp=sharing&ouid=101565569049160067609&rtpof=true&sd=true"
     },
     { 
-        "title": "Project 3",
-        "category": "code",
-        "picture": "/images/portfolio_card_1.png" ,
-        "description": "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis",
-        "link": "https://ru.wikipedia.org/"
-    
+        "title": "ROC-AUC dictionary",
+        "category": "statisctics",
+        "picture": "/images/portfolio_card_roc.png" ,
+        "description": "Analysis of pro-independence campaign of the referendum in Scotland, potential public attitudes towards income redistribution in GB, customer reviews",
+        "link": "https://docs.google.com/document/d/1wO7bdUr_H_XJFPGSMUlGgJ0FSB0Yi3h5sawnfFEUTpI/edit?usp=sharing"
     },
     { 
-        "title": "Project 4",
-        "category": "UI",
-        "picture": "/images/portfolio_card_2.png" ,
-        "description": "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis",
-        "link": "https://ru.wikipedia.org/"
-    
+        "title": "Survey R UK Data Service",
+        "category": "statisctics",
+        "picture": "/images/portfolio_card_facebook.png" ,
+        "description": "Analysis of data from the UK Data Service system to assist Facebook in targeting new parents in their advertisements",
+        "link": "https://docs.google.com/document/d/18QUMi7QBMzuYeaGaFvzSGVri11eDieeJgH--Crf1_b0/edit?usp=sharing"
+    },
+    { 
+        "title": "Moran's statistics",
+        "category": "statisctics",
+        "picture": "/images/portfolio_card_moran.png" ,
+        "description": "The spatial autocorrelation and defining clusters within a dataset on a map.",
+        "link": "https://docs.google.com/document/d/11U9bI_8Co_m6X2po8EXR5iGbnRcZh4SNv02xPxlRIXc/edit?usp=sharing"
+    },
+    { 
+        "title": "Econometrics - Labour market in  the US",
+        "category": "statisctics",
+        "picture": "/images/portfolio_card_econometrics.png" ,
+        "description": "Finding-out the factors that influence on wage of people.",
+        "link": "https://drive.google.com/file/d/1e6Cw81JGDvq821ZrVBXimxK_Wr941ICN/view?usp=sharing"
+    },
+    { 
+        "title": "Neural Network",
+        "category": "python",
+        "picture": "/images/portfolio_card_python.png" ,
+        "description": "Image recognision via neural network: training and optimization.\nDeep Learning",
+        "link": "https://colab.research.google.com/drive/108EyjbjBCRGmdlERRMFq90zn0kzafOBK?usp=sharing"
     }
 ]
   

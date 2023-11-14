@@ -20,6 +20,10 @@
         "level": "60"
     },
     {
+        "type": "TypeScript",
+        "level": "30"
+    },
+    {
         "type": "LateX",
         "level": "100"
     },

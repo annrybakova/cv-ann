@@ -174,7 +174,7 @@ li svg {
     
     background-color: #EEEEEE;
     padding-left: 15px;
-    width: 100vh;
+    width: 150vh;
     min-height: 157px;
 }
 
@@ -341,7 +341,8 @@ li svg {
 .portfolio-img{
     width: 310px;
     height: 190px;
-    animation: slidein 2s; 
+    animation: slidein 2s;
+    background-size: cover;
 }
 
 .img-content:hover{
@@ -402,6 +403,7 @@ a{
 
 .info-wrapper{
     color: black;
+    white-space: pre-wrap;
 }
 
 .feedback-list{
@@ -418,6 +420,7 @@ a{
 .feedback-details{
     background-color: #EEEEEE;
     padding: 20px;
+    white-space: pre-wrap;
 }
 
 .reporter{

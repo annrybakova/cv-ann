@@ -34,8 +34,9 @@ const Portfolio = ({collapsed}) => {
       <h2>Portfolio</h2>
       <ul className="portfolio-btn">
         <li className={activeItem === 'all' ? 'active' : 'filter-btn'} onClick={() => handleItemClick('all')}>All</li>/
-        <li className={activeItem === 'code' ? 'active' : 'filter-btn'} onClick={() => handleItemClick('code')}>Code</li>/
-        <li className={activeItem === 'UI' ? 'active' : 'filter-btn'} onClick={() => handleItemClick('UI')}>UI</li>
+        <li className={activeItem === 'science' ? 'active' : 'filter-btn'} onClick={() => handleItemClick('science')}>Science</li>/
+        <li className={activeItem === 'statisctics' ? 'active' : 'filter-btn'} onClick={() => handleItemClick('statisctics')}>Statisctics</li>/
+        <li className={activeItem === 'python' ? 'active' : 'filter-btn'} onClick={() => handleItemClick('python')}>Python</li>
       </ul>
       <div className="grid">
         {filteredItems.map((item, index) => (
