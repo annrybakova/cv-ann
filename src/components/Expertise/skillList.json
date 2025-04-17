@@ -1,62 +1,46 @@
 [
     {
         "type": "HTML",
-        "level": "70"
+        "level": "50"
     },
     {
-        "type": "JavaScript",
-        "level": "60"
+        "type": "JavaScript (React, NodeJS)",
+        "level": "30"
     },
     {
         "type": "CSS",
         "level": "70"
     },
     {
-        "type": "React",
-        "level": "60"
+        "type": "Nosql (MongoDB)",
+        "level": "40"
     },
     {
         "type": "Redux",
-        "level": "60"
+        "level": "20"
     },
     {
         "type": "TypeScript",
-        "level": "30"
-    },
-    {
-        "type": "LateX",
-        "level": "100"
+        "level": "40"
     },
     {
         "type": "MatLab",
         "level": "80"
     },
     {
-        "type": "STATA",
-        "level": "80"
-    },
-    {
         "type": "R - studio",
-        "level": "80"
+        "level": "60"
     },
     {
-        "type": "SQL",
-        "level": "70"
+        "type": "SQL (PostgreSQL)",
+        "level": "60"
     },
     {
         "type": "PowerBI",
-        "level": "70"
+        "level": "20"
     },
     {
-        "type": "Python (NumPy, Pandas)",
-        "level": "40"
-    },
-    {
-        "type": "C++",
-        "level": "50"
-    },
-    {
-        "type": "Sparql",
-        "level": "60"
+        "type": "Python (NumPy)",
+        "level": "20"
     }
 ]

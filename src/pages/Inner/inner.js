@@ -27,9 +27,9 @@ function InnerPage() {
           content={
             <Info text={
               <>
-                Dedicated Data Analyst & QA Engineer with over 6 years of experience in spearheading quality assurance initiatives and data analysis within cutting-edge medical technology solutions and global consulting.
+                Enthusiastic Junior QA Engineer and Front-End Developer with a solid understanding of backend technologies. Known for my ability to learn rapidly and work effectively both independently and within team environments. 
                 <br />
-                Holder of both Bachelor's and Master's degrees, adept in statistics and software development processes.
+                Holder of both Bachelor's and Master's degrees.
                 <br />
                 Proficient in English, with full professional and conversational proficiency.
               </>
@@ -59,9 +59,9 @@ function InnerPage() {
           />
         </div>
 
-        <div id="portfolio">
+        {/* <div id="portfolio">
           <Portfolio />
-        </div>
+        </div> */}
 
         <div id="contact">
           <Address />

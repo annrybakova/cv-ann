@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.89925486.css",
-    "main.js": "/static/js/main.94bd78f2.js",
-    "static/media/bck-home.png": "/static/media/bck-home.d498ec78b0ac23c6c3bc.png",
+    "main.css": "/static/css/main.23c07ffb.css",
+    "main.js": "/static/js/main.3c712ab4.js",
+    "static/media/bck-home.png": "/static/media/bck-home.3a10bdd87d19444d190a.png",
     "index.html": "/index.html",
-    "main.89925486.css.map": "/static/css/main.89925486.css.map",
-    "main.94bd78f2.js.map": "/static/js/main.94bd78f2.js.map"
+    "main.23c07ffb.css.map": "/static/css/main.23c07ffb.css.map",
+    "main.3c712ab4.js.map": "/static/js/main.3c712ab4.js.map"
   },
   "entrypoints": [
-    "static/css/main.89925486.css",
-    "static/js/main.94bd78f2.js"
+    "static/css/main.23c07ffb.css",
+    "static/js/main.3c712ab4.js"
   ]
 }

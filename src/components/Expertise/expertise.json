@@ -1,49 +1,34 @@
-[ {
-  "date": "2022-2023",
+[ 
+  {
+  "date": "2024-present",
   "info": {
-    "company": "Haemonetics",
+    "company": "AION Biosystems",
     "job": "QA Engineer",
-    "description": "- Collaborated with cross-functional teams in the development and rigorous testing of innovative features for the blood transfusion tracking interhospital system.\n- Ensured the high quality, performance, and reliability of the system through comprehensive testing and proactive bug resolution."
+    "description": "- Ensured the high quality, performance, and reliability of the system of shields and application that are monitoring patients’ conditions to anticipate risky health periods through comprehensive testing and proactive bug resolution."
     }
   },
   {
   "date": "2021-2022",
   "info": {
     "company": "KiberOne Israel",
-    "job": "General Product Manager",
-    "description": "- Orchestrated the successful launch of a private school for children, leading a team of educators.\n- Strategically assigned classes and extracurricular activities while closely monitoring and reporting on progress."
+    "job": "Computer Programming Tutor",
+    "description": "- Taught HTML, CSS, JS, fundamental programming concepts, and mathematics. \n- Developed and created educational tasks and assignments to enhance the learning experience."
     }
   },
   {
-  "date": "2016-2019",
+  "date": "2017-2019",
   "info": {
-    "company": "Urban Science",
-    "job": "Middle Data Analyst",
-    "description": "- Leveraged My-SQL expertise to develop, optimize, and implement functions, stored processes, and scripts, contributing to the creation of internal systems and regular updates.\n- Spearheaded data warehousing efforts, designing and maintaining databases for prominent European clients including Nissan, Opel, Skoda, Audi, and Volkswagen.\n- Generated comprehensive CSV and Excel reports by executing database queries, providing vital insights to support informed decision-making.\n- Championed process automation initiatives, utilizing PowerShell and Batch scripting to streamline monthly updates of internal systems."
+    "company": "Bistro 3 Israel, restaurant chain",
+    "job": "Logistics Manager",
+    "description": "- Analyze raw material and inventory levels, sales plans, and long-term and short-term forecasts using ABC-XYZ analysis.\n- Monitor inventory turnover and make operational adjustments to purchasing plans.\n- Continuously work to minimize transportation and storage costs.\n- Maintain optimal inventory levels."
     }
   },
   {
     "date": "2014-2017",
     "info": {
-      "company": "National Research University — Higher School of Economics",
-      "job": "Educational Assistant",
-      "description": "Facilitated the learning process by creating tailored homework assignments and conducting consultations for students in ‘Mathematical Analysis’ and ‘Introduction to Computer Science’."
-    }
-  },
-  {
-    "date": "2016",
-    "info": {
-      "company": "I-Teco",
-      "job": "ATM Tester",
-      "description": "Crafted robust test algorithms for ATM and POS-terminals, ensuring the integration of new features into credit card payment systems\nConducted rigorous testing to guarantee the stability and functionality of payment systems."
-    }
-  },
-  {
-    "date": "2015",
-    "info": {
-      "company": "Ministry of Digital Development, Communications and Mass Media",
-      "job": "Intern",
-      "description": "- Supporting Administrative Processes: Organizing meetings, maintaining documentation, and addressing public inquiries, among other administrative tasks.\n- Data Analysis and Report Preparation: Taking charge of collecting and analyzing data in the field of mass communications and telecommunications, and preparing reports for the management.\n- Assisting in Communication Campaigns: Actively participating in the development and execution of communication strategies and campaigns. This involved creating content for social media, crafting press releases, and other relevant materials.\n- Research and Analytics: Conducting research within the realm of mass communications and generating analytical materials.\n- Project Support: Engaging in various projects linked to the advancement of mass communications and the telecommunications sector.\n- Training and Development: Receiving training from seasoned professionals, honing skills in mass communications, public administration, and telecommunications."
+      "company": "Sumy State Pedagogical University named after A.S. Makarenko",
+      "job": "Teacher",
+      "description": "- Enhanced the learning experience by designing customized homework assignments and providing consultations for students in 'Introduction to Computer Science' and 'Data Analysis'"
     }
   }
 ]

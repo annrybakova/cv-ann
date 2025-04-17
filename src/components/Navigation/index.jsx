@@ -23,7 +23,7 @@ const Navigation = () => {
       });
     }, { threshold: 1 });
   
-    const sectionIds = ['aboutMe', 'education', 'experience', 'skills', 'portfolio', 'contact', 'feedback'];
+    const sectionIds = ['aboutMe', 'education', 'experience', 'skills', 'contact', 'feedback'];
     sectionIds.forEach(id => {
       const section = document.getElementById(id);
       if (section) {
@@ -46,7 +46,7 @@ const Navigation = () => {
     { id: 'education', text: 'Education', icon: faGraduationCap },
     { id: 'experience', text: 'Experience', icon: faPen },
     { id: 'skills', text: 'Skills', icon: faGem },
-    { id: 'portfolio', text: 'Portfolio', icon: faBriefcase },
+    // { id: 'portfolio', text: 'Portfolio', icon: faBriefcase },
     { id: 'contact', text: 'Contact', icon: faPaperPlane },
     { id: 'feedback', text: 'Feedback', icon: faComment }
   ];  

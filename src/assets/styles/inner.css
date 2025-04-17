@@ -78,7 +78,7 @@ li:hover {
     cursor: pointer;
 }
 li.active {
-    color: #26C17E;
+    color: #0096C7;
 }
 
 li svg {
@@ -111,7 +111,7 @@ li svg {
     padding-left: 10px;
     padding-top: 10px;
     gap: 30px;
-    color: #26C17E;
+    color: #0096C7;
 }
 
 .timeline {
@@ -125,7 +125,7 @@ li svg {
     margin-top: 150px;
     text-align: center;
     overflow-y: auto;
-    color: #26C17E;
+    color: #0096C7;
     transform: scale(2);
 }
 
@@ -166,7 +166,7 @@ li svg {
 }
 
 .line{
-    border-left: 5px solid #26C17E;
+    border-left: 5px solid #0096C7;
     height: 100%;
 }
 
@@ -208,7 +208,7 @@ li svg {
     display: flex;
     align-items: center;
     height: 40px;
-    background-color: #26C17E;
+    background-color: #0096C7;
 }
 
 .skill-type{
@@ -334,8 +334,8 @@ li svg {
 }
 
 .img-content a{
-    text-decoration: #26C17E underline;
-    color:#26C17E 
+    text-decoration: #0096C7 underline;
+    color:#0096C7 
 }
 
 .portfolio-img{
@@ -375,7 +375,7 @@ li svg {
 }
 
 .filter-btn:active{
-    color: #26C17E;
+    color: #0096C7;
 }
 
 .contacts-links{
@@ -390,7 +390,7 @@ li svg {
 }
 
 .contacts-links svg{
-    color: #26C17E;
+    color: #0096C7;
     scale: 1.8;
     margin-right: 10px;
 }
@@ -436,7 +436,7 @@ a{
 }
 
 .feedback-site{
-    color: #26C17E;
+    color: #0096C7;
 }
 
 .scroll-btn{
@@ -486,7 +486,7 @@ a{
 .skills-form {
     margin-top: 20px;
     padding: 10px;
-    border: 2px solid #26C17E;
+    border: 2px solid #0096C7;
     border-radius: 8px;
     margin-bottom: 20px;
   }

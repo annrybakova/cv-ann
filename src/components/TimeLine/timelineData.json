@@ -1,22 +1,17 @@
 [
     {
         "date": 2011,
-        "title": "Applied Mathematics and Computer Science, BSc",
-        "text": "National Research University Higher School of Economics\nThesis: Analysis and visualisation of genetic information in diagnostics.\nGPA 81.6"
+        "title": "Faculty of Physics and Mathematics, BSc",
+        "text": "Sumy State Pedagogical University named after A.S. Makarenko\nGPA 85.3"
     },
     {
         "date": 2015,
-        "title": "Mathematical Models in Economics, MSc",
-        "text": "National Research University Higher School of Economics\nThesis: Simulation sytems as tools for the analysis of customer behavior based on online store data.\nGPA 84.6"
+        "title": "High School Pedagogy, MSc",
+        "text": "Sumy State Pedagogical University named after A.S. Makarenko\nGPA 87.1"
     },
     {
         "date": 2023,
         "title": "Front-End Development",
         "text": "EPAM University Program - Digital Platform"
-    },
-    {
-        "date": 2023,
-        "title": "University of Haifa, PhD student",
-        "text": "Institute of Evolutionary and Environmental Biology\nDepartment of Bioinformatics"
     }
 ]
