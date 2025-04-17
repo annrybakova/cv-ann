@@ -14,7 +14,7 @@ const Address = () => {
         <p><FontAwesomeIcon icon={faLinkedin} /> <a href={contactData.linkedin}>{contactData.shortLinkedin}</a></p>
         <p><FontAwesomeIcon icon={faFacebook} /> <a href={contactData.facebook}>{contactData.shortFacebook}</a></p>
         <p><FontAwesomeIcon icon={faGitlab} /> <a href={contactData.gitlab}>{contactData.shortGitlab}</a></p>
-        <p><FontAwesomeIcon icon={faGithub} /> <a href={contactData.gitnub}>{contactData.shortGithub}</a></p>
+        <p><FontAwesomeIcon icon={faGithub} /> <a href={contactData.github}>{contactData.shortGithub}</a></p>
       </div>
     </div>
   );
